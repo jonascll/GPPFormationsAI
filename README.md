@@ -28,8 +28,7 @@ the navmeshagent  has multiple variables that change how the pathfinding works i
 4. priority : the priority of avoidance (lower number means higher priority to avoid)
 
 some of the other setting as seen below change the slope you can walk on and decide the step up height but i didnt use these since i dont have stairs or elevations
-
-
+<br>
 ![](https://github.com/jonascll/GPPFormationsAI/blob/main/navmeshparameters.png)
 
 ## Rectangle formation
