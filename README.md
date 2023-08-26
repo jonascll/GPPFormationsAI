@@ -1,9 +1,9 @@
 # AI to make basic formations
 This github repository consists of a demo implementation of logic for creating formations that traverse the world via navmesh
 There is 3 basic formations
-1. Rectangle formation: the formation consists of the ai forming lines in a certain ammount of rows
-2. Circle formation: the ai forms a circle around a center point decided by a radius
-3. Triangle formation: the ai forms a triangle shape
+1. Rectangle formation: the formation consists of the ai forming lines in a certain ammount of rows. takes into account a row and column spread value
+3. Circle formation: the ai forms a circle around a center point decided by a radius
+4. Triangle formation: the ai forms a triangle shape takes into account a row and column spread value
 ## Example GIF's of the formations in action
 ![](https://github.com/jonascll/GPPFormationsAI/blob/main/formationRectangle.gif)
 ![](https://github.com/jonascll/GPPFormationsAI/blob/main/formationCircle.gif)
