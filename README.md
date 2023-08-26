@@ -20,12 +20,17 @@ There is a on screen UI i added to set all the variables needed for each formati
 i made a small script that makes a rectangle and check for any pawns in given rectangle, this is also the way i picked the commander or controling unit, as in the unit that controls the entire mob of ai, i picked the one closest to the start of my selection.
 ## Navmesh
 for the ai movement i used unity's navmeshagent and navmeshsurface components from their navigation plugin, this allow for the ai to calculates its own path that it will move towards based on a baked navmesh. this also allows you to do intervene if the path fails with certain methods that are available
-### NavMeshSurface
+### NavMeshAgent and avoidance settings/pathing settings
 the navmeshagent  has multiple variables that change how the pathfinding works in regards to avoiding objects AND other navmeshagents
 1. radius : this is basically a sphere collider used to get collisions with other game objects, radius decides the radius of this collider
 2. height : thhis same collider's height
 3. quality : how good the avoiding is
 4. priority : the priority of avoidance (lower number means higher priority to avoid)
+
+The navmeshagent methods i used were
+1. destination : this method sets the vector 3 destination which the navmesh then calculates the path for and moves the ai towards the position once its set without any other input
+2. CalculatePath : this method gets the path that would be calculated when destination is set with the vector target you give, this allows you to check for failed paths. I used this to go to the nearest wall when a path failed
+
 
 some of the other setting as seen below change the slope you can walk on and decide the step up height but i didnt use these since i dont have stairs or elevations
 <br>
@@ -45,7 +50,7 @@ The circle formation was achieved by taking the comanders position and offsettin
 for the triangle formation i had multiple formulas to calculate each point on every row and column and used these to offset the destination of each pawn from the commanders position (comander is the tip of the triangle)
 ### Formulas used
 1. get index of row based on index : (√8 * index + 1| -1) / 2 (rounded up)
-2. get number of pawns in a row : row index * (row index + 1) / 2  ( n*(n+1)/2 )
+2. get number of columns in a row : row index * (row index + 1) / 2  ( n*(n+1)/2 )
 # Result
 As seen in the demo gif's its a very basic system that is not fully fledged out and still has its bugs with pathfinding but a good demo project to learn from as a simple formation demo, the formations possible with this demo are very basic but also fundamental
 # Conclusion
