@@ -20,6 +20,16 @@ There is a on screen UI i added to set all the variables needed for each formati
 i made a small script that makes a rectangle and check for any pawns in given rectangle, this is also the way i picked the commander or controling unit, as in the unit that controls the entire mob of ai, i picked the one closest to the start of my selection.
 ## Navmesh
 for the ai movement i used unity's navmeshagent and navmeshsurface components from their navigation plugin, this allow for the ai to calculates its own path that it will move towards based on a baked navmesh. this also allows you to do intervene if the path fails with certain methods that are available
+### NavMeshSurface
+the navmeshagent  has multiple variables that change how the pathfinding works in regards to avoiding objects AND other navmeshagents
+1. radius : this is basically a sphere collider used to get collisions with other game objects, radius decides the radius of this collider
+2. height : thhis same collider's height
+3. quality : how good the avoiding is
+4. priority : the priority of avoidance (lower number means higher priority to avoid)
+
+some of the other setting as seen below change the slope you can walk on and decide the step up height but i didnt use these since i dont have stairs or elevations
+![](https://github.com/jonascll/GPPFormationsAI/blob/main/navmeshparameters.png)
+
 ## Rectangle formation
 For the rectangle formation i used the commanders location to calculate the destination for all the other ai selected, the index was calculated based on row and column, the columns were calculated based on the ammount of rows. And with these i could now loop over each pawn that isnt the commander and calculate the destination based on the comanders position
 ### Formulas used
