@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+        <ui:Label tabindex="-1" text="Right mouse button + drag to select pawns" display-tooltip-when-elided="true" style="-unity-text-align: upper-right;" />
+        <ui:Label tabindex="-1" text="Left mouse button to put pawn target" display-tooltip-when-elided="true" style="-unity-text-align: upper-right;" />
+        <ui:Label tabindex="-1" text="Middle mouse button to clear selection and target" display-tooltip-when-elided="true" style="-unity-text-align: upper-right;" />
+        <ui:Label tabindex="-1" text="For the sliders rowSpread, columnSpread, circleRadius" display-tooltip-when-elided="true" style="-unity-text-align: upper-right;" />
+        <ui:Label tabindex="-1" text=" and columnGap you can put float values" display-tooltip-when-elided="true" style="-unity-text-align: upper-right;" />
+        <ui:SliderInt picking-mode="Ignore" label="ammount of rows" value="0" high-value="30" name="rows" show-input-field="true" focusable="false" style="height: 38px; width: 283px; flex-direction: row; align-items: flex-end; justify-content: flex-end; align-self: flex-end;" />
+        <ui:Slider picking-mode="Ignore" label="rowSpread" value="0" high-value="100" name="rowSpread" show-input-field="true" focusable="false" style="height: 44px; width: 283px; align-self: flex-end;" />
+        <ui:Slider picking-mode="Ignore" label="columnSpread" value="0" high-value="100" name="columnSpread" show-input-field="true" focusable="false" style="height: 42px; width: 283px; align-self: flex-end;" />
+        <ui:Slider picking-mode="Ignore" label="circleRadius" value="0" high-value="100" name="circleRadius" show-input-field="true" focusable="false" style="height: 40px; width: 283px; align-self: flex-end;" />
+        <ui:Slider picking-mode="Ignore" label="columnGap" value="0" high-value="100" name="columnGap" show-input-field="true" focusable="false" style="height: 41px; width: 283px; align-self: flex-end;" />
+        <ui:RadioButtonGroup label="Radio Button Group" value="-1" choices="Rectangle formation,Circle formation, Triangle formation" name="pickFormation" style="justify-content: space-between; align-self: flex-end;" />
+    </ui:VisualElement>
+</ui:UXML>
