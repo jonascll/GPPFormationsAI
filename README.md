@@ -23,7 +23,7 @@ for the ai movement i used unity's navmeshagent and navmeshsurface components fr
 ### NavMeshAgent and avoidance settings/pathing settings
 the navmeshagent  has multiple variables that change how the pathfinding works in regards to avoiding objects AND other navmeshagents
 1. radius : this is basically a sphere collider used to get collisions with other game objects, radius decides the radius of this collider
-2. height : thhis same collider's height
+2. height : this same collider's height
 3. quality : how good the avoiding is
 4. priority : the priority of avoidance (lower number means higher priority to avoid)
 
