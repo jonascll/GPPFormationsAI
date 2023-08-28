@@ -41,6 +41,7 @@ For the rectangle formation i used the commanders location to calculate the dest
 ### Formulas used
 1. index formula : Index of columns * total rows + index of rows
 2. Columns formula : total pawns selected / total rows (rounded up)
+3. position formula : commander position + (row Index * row spread * -commander vector forward) + (((column index * column spread) + rectangle gap) * commander vector right)
 ## Circle formation
 The circle formation was achieved by taking the comanders position and offsetting his x coordinates by the set radius for the circle, then by calculating the angle needed for each pawn (in radians), i could then loop over all of the pawns excluding the commander and calculate their destination  on the circle using cos and sin
 ### Formulas used
@@ -51,6 +52,9 @@ for the triangle formation i had multiple formulas to calculate each point on ev
 ### Formulas used
 1. get index of row based on index : (√8 * index + 1| -1) / 2 (rounded up)
 2. get number of columns in a row : row index * (row index + 1) / 2  ( n*(n+1)/2 )
+3. position formula:  X:      commander position X + ((index + 1) - column count for row) * column spread + ((row index - 1 ) * columnspread / 2)
+                      Y:      commander position y + (row index - 1) * -row spread
+4. rotation formula: commander rotation * (calculated position - commander position) + commander position
 # Result
 As seen in the demo gif's its a very basic system that is not fully fledged out and still has its bugs with pathfinding but a good demo project to learn from as a simple formation demo, the formations possible with this demo are very basic but also fundamental
 # Conclusion
