@@ -52,9 +52,11 @@ For the triangle formation, I had multiple formulas to calculate each point on e
 ### Formulas used
 1. Get index of row based on index: (√8 * index + 1| -1) / 2 (rounded up)
 2. Get number of columns in a row: row index * (row index + 1) / 2  ( n*(n+1)/2 )
-3. Position formula:  X:      commander position X + ((index + 1) - column count for row) * column spread + ((row index - 1 ) * columnspread / 2)
+3. Position formula: <br>
+                      X:      commander position X + ((index + 1) - column count for row) * column spread + ((row index - 1 ) * columnspread / 2)
+                     <br>
                       Y:      commander position y + (row index - 1) * -row spread
-4. Rotation formula: commander rotation * (calculated position - commander position) + commander position
+5. Rotation formula: commander rotation * (calculated position - commander position) + commander position
 # Result
 As seen in the demo gifs, it's a very basic system that is not fully fleshed out and still has its bugs with pathfinding, but a good demo project to learn from as a simple formation demo. The formations possible with this demo are very basic but also fundamental.
 # Conclusion
